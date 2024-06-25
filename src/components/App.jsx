@@ -1,7 +1,9 @@
 import "./App.css";
+import Layout from "./Layout/Layout";
 import ContactList from "./ContactList/ContactList";
 import SearchBox from "./SearchBox/SearchBox";
 import ContactForm from "./ContactForm/ContactForm";
+
 import { useDispatch } from "react-redux";
 import { fetchContacts } from "../redux/contactsOps";
 import { useEffect } from "react";
@@ -19,6 +21,7 @@ function App() {
   return (
     <div>
       <h1 className="title">Phonebook</h1>
+      <Layout />
       <ContactForm />
 
       <SearchBox />
