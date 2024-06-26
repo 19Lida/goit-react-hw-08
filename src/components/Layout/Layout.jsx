@@ -1,6 +1,6 @@
-import { Navigation } from "../Navigation/Navigation";
+import { Navigation } from "../AppBar/Navigation/Navigation";
 import { UserMenu } from "../UserMenu/UserMenu";
-import { AuthNav } from "../AuthNav/AuthNav";
+import { AuthNav } from "../AppBar/AuthNav/AuthNav";
 import css from "./layout.module.css";
 const Layout = () => {
   return (

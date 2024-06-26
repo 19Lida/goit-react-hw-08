@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 // import * as Yup from "yup";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import css from "./registrationForm.module.css";
 const RegistrationForm = () => {
   return (
