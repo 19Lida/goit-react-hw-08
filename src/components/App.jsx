@@ -1,8 +1,9 @@
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Layout from "./Layout/Layout";
-import ContactList from "./ContactList/ContactList";
-import SearchBox from "./SearchBox/SearchBox";
-import ContactForm from "./ContactForm/ContactForm";
+// import ContactList from "./ContactList/ContactList";
+// import SearchBox from "./SearchBox/SearchBox";
+// import ContactForm from "./ContactForm/ContactForm";
 
 import { useDispatch } from "react-redux";
 import { fetchContacts } from "../redux/contactsOps";
@@ -19,14 +20,16 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1 className="title">Phonebook</h1>
-      <Layout />
-      <ContactForm />
+    <BrowserRouter>
+      <div>
+        {/* <h1 className="title">Phonebook</h1> */}
+        <Layout />
+        {/* <ContactForm /> */}
 
-      <SearchBox />
-      <ContactList />
-    </div>
+        {/* <SearchBox /> */}
+        {/* <ContactList /> */}
+      </div>
+    </BrowserRouter>
   );
 }
 

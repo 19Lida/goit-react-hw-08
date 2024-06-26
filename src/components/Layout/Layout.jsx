@@ -1,14 +1,18 @@
-import { NavLink } from "react-router-dom";
+import { Navigation } from "../Navigation/Navigation";
+import { UserMenu } from "../UserMenu/UserMenu";
+import { AuthNav } from "../AuthNav/AuthNav";
 import css from "./layout.module.css";
-import items from "./items";
 const Layout = () => {
-  const elements = items.map(({ id, text, link }) => (
-    <li key={id}>
-      <NavLink className={css.link} to={link}>
-        {text}
-      </NavLink>
-    </li>
-  ));
-  return <ul className={css.menu}>{elements}</ul>;
+  return (
+    <div className={css.layout}>
+      <div className="container">
+        <div className={css.layoutRow}>
+          <AuthNav />
+          <Navigation />
+          <UserMenu />
+        </div>
+      </div>
+    </div>
+  );
 };
 export default Layout;
