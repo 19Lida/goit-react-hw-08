@@ -1,8 +1,8 @@
 import Navigation from "../Navigation/Navigation";
-import { UserMenu } from "../UserMenu/UserMenu";
+import UserMenu from "../UserMenu/UserMenu";
 import AuthNav from "../AuthNav/AuthNav";
 import css from "./layout.module.css";
-import RegistrationPage from "../../pages/RegistrationPage";
+import RegistrationPage from "../../pages/Registration/RegistrationPage";
 const Layout = () => {
   return (
     <div className={css.layout}>

@@ -1,0 +1,17 @@
+.userContainer {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+/* .button {
+    
+  margin-left: 60px;
+  :hover {
+    background-color:  #FBD051;
+    border: 2px solid gray;
+    border-radius: 3px;
+  }
+} */
