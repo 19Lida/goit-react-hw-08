@@ -17,21 +17,26 @@ const RegistrationForm = () => {
     >
       <Form className={css.formContainer}>
         <div className={css.box}>
-          <label className={css.label} htmlFor="name">
+          <label className={css.label} htmlFor="email">
             Email:
           </label>
           <Field className={css.field} type="text" id="email" name="email" />
           <ErrorMessage name="email" />
         </div>
         <div className={css.box}>
-          <label className={css.label} htmlFor="number">
+          <label className={css.label} htmlFor="password">
             Password:
           </label>
-          <Field className={css.field} type="text" id="number" name="number" />
-          <ErrorMessage name="number" />
+          <Field
+            className={css.field}
+            type="password"
+            id="password"
+            name="password"
+          />
+          <ErrorMessage name="password" />
         </div>
         <button className={css.button} type="submit">
-          Log in
+          Log In
         </button>
       </Form>
     </Formik>
