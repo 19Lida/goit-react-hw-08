@@ -1,4 +1,4 @@
-import RegistrationForm from "../Registration/RegistrationPage";
+import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 import css from "./registrationPage.module.css";
 const RegistrationPage = () => {
   return (

@@ -1,8 +1,10 @@
 import { BrowserRouter } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
+import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
+import RestrictedRoute from "./RestrictedRoute/RestrictedRoute.jsx";
 import "./App.css";
-import Layout from "./Layout/Layout";
+import Layout from "../components/Layout/Layout.jsx";
 // import ContactList from "./ContactList/ContactList";
 // import SearchBox from "./SearchBox/SearchBox";
 // import ContactForm from "./ContactForm/ContactForm";
@@ -31,17 +33,22 @@ function App() {
   return (
     <BrowserRouter>
       {/* <div> */}
-      {/* <h1 className="title">Phonebook</h1> */}
+      <h1 className="title">Phonebook</h1>
       <Layout />
-      <Suspense fallback={<p>...Load page</p>}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route index element={<HomePage />} />
+        <Route element={<RestrictedRoute />}>
           <Route path="/register" element={<RagistrarionPage />} />
           <Route path="/login" element={<LoginPage />} />
+        </Route>
+
+        <Route element={<PrivateRoute />}>
           <Route path="/contacts" element={<ContactsPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
+        </Route>
+
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
       ;{/* <ContactForm /> */}
       {/* <SearchBox /> */}
       {/* <ContactList /> */}

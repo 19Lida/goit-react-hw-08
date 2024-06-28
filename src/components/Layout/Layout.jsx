@@ -1,19 +1,16 @@
-import Navigation from "../Navigation/Navigation";
-import UserMenu from "../UserMenu/UserMenu";
-import AuthNav from "../AuthNav/AuthNav";
-import css from "./layout.module.css";
-import RegistrationPage from "../../pages/Registration/RegistrationPage";
+// import { useSelector } from "react-redux";
+import { Outlet } from "react-router-dom";
+import AppBar from "../AppBar/AppBar";
+// import {isLoggedIn} from selectors........................
+import { Suspense } from "react";
 const Layout = () => {
+  // const isLogin = useSelectors(isLoggedIn);
   return (
-    <div className={css.layout}>
-      <div className="container">
-        <div className={css.layoutRow}>
-          <AuthNav />
-          <Navigation />
-          <UserMenu />
-          <RegistrationPage />
-        </div>
-      </div>
+    <div>
+      <AppBar />
+      <Suspense fallback={null}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };

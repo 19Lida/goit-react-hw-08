@@ -36,7 +36,7 @@ const RegistrationForm = () => {
           <ErrorMessage name="password" />
         </div>
         <button className={css.button} type="submit">
-          Log In
+          Register
         </button>
       </Form>
     </Formik>
