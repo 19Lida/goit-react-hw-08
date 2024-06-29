@@ -33,7 +33,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* <div> */}
-      <h1 className="title">Phonebook</h1>
+      {/* <h1 className="title">Phonebook</h1> */}
       <Layout />
       <Routes>
         <Route path="/" element={<Layout />} />
@@ -49,7 +49,7 @@ function App() {
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      ;{/* <ContactForm /> */}
+      {/* <ContactForm /> */}
       {/* <SearchBox /> */}
       {/* <ContactList /> */}
       {/* </div> */}

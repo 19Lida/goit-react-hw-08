@@ -17,10 +17,17 @@ const RegistrationForm = () => {
     >
       <Form className={css.formContainer}>
         <div className={css.box}>
+          <label className={css.label} htmlFor="name">
+            Name:
+          </label>
+          <Field className={css.field} type="text" id="name" name="name" />
+          <ErrorMessage name="name" />
+        </div>
+        <div className={css.box}>
           <label className={css.label} htmlFor="email">
             Email:
           </label>
-          <Field className={css.field} type="text" id="email" name="email" />
+          <Field className={css.field} type="email" id="email" name="email" />
           <ErrorMessage name="email" />
         </div>
         <div className={css.box}>
