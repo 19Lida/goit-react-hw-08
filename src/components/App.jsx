@@ -1,8 +1,11 @@
 import { BrowserRouter } from "react-router-dom";
+// import { Provider } from "react-redux";
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
-import RestrictedRoute from "./RestrictedRoute/RestrictedRoute.jsx";
+
+// import { PersistGate } from "redux-persist/integration/react";
+// import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
+// import RestrictedRoute from "./RestrictedRoute/RestrictedRoute.jsx";
 import "./App.css";
 import Layout from "../components/Layout/Layout.jsx";
 // import ContactList from "./ContactList/ContactList";
@@ -12,6 +15,7 @@ import Layout from "../components/Layout/Layout.jsx";
 import { useDispatch } from "react-redux";
 import { fetchContacts } from "../redux/contactsOps";
 import { useEffect } from "react";
+
 const ContactsPage = lazy(() => import("../pages/Contacts/ContactsPage.jsx"));
 const HomePage = lazy(() => import("../pages/Home/HomePage.jsx"));
 const LoginPage = lazy(() => import("../pages/Login/LoginPage.jsx"));
@@ -34,18 +38,18 @@ function App() {
     <BrowserRouter>
       {/* <div> */}
       {/* <h1 className="title">Phonebook</h1> */}
-      <Layout />
+      {/* <Layout /> */}
       <Routes>
         <Route path="/" element={<Layout />} />
         <Route index element={<HomePage />} />
-        <Route element={<RestrictedRoute />}>
-          <Route path="/register" element={<RagistrarionPage />} />
-          <Route path="/login" element={<LoginPage />} />
-        </Route>
+        {/* <Route element={<RestrictedRoute />}> */}
+        <Route path="/register" element={<RagistrarionPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        {/* </Route> */}
 
-        <Route element={<PrivateRoute />}>
-          <Route path="/contacts" element={<ContactsPage />} />
-        </Route>
+        {/* <Route element={<PrivateRoute />}> */}
+        <Route path="/contacts" element={<ContactsPage />} />
+        {/* </Route> */}
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
-// import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import AppBar from "../AppBar/AppBar";
 // import AuthNav from "../AuthNav/AuthNav";
 import UserMenu from "../../components/UserMenu/UserMenu";
 import { isUserLogin } from "../../redux/auth/selectors";
-// import { Suspense } from "react";
+import { Suspense } from "react";
 const Layout = () => {
   const isLoggedIn = useSelector(isUserLogin);
   return (
@@ -12,9 +12,9 @@ const Layout = () => {
       <AppBar />
       {/* {!isLoggedIn && <AuthNav />} */}
       {isLoggedIn && <UserMenu />}
-      {/* <Suspense fallback={null}>
+      <Suspense fallback={null}>
         <Outlet />
-      </Suspense> */}
+      </Suspense>
     </div>
   );
 };
