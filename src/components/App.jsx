@@ -1,9 +1,5 @@
-// import { BrowserRouter } from "react-router-dom";
-// import { Provider } from "react-redux";
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-
-// import { PersistGate } from "redux-persist/integration/react";
 // import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 // import RestrictedRoute from "./RestrictedRoute/RestrictedRoute.jsx";
 import "./App.css";
@@ -12,7 +8,9 @@ import Layout from "../components/Layout/Layout.jsx";
 // import SearchBox from "./SearchBox/SearchBox";
 // import ContactForm from "./ContactForm/ContactForm";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+// import { refreshUser } from "../redux/auth/operation.js";.................
+// import selector ................................................................
 import { fetchContacts } from "../redux/contactsOps";
 import { useEffect } from "react";
 
@@ -36,18 +34,19 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Layout />} />
-      <Route index element={<HomePage />} />
-      {/* <Route element={<RestrictedRoute />}> */}
-      <Route path="/register" element={<RagistrarionPage />} />
-      <Route path="/login" element={<LoginPage />} />
-      {/* </Route> */}
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        {/* <Route element={<RestrictedRoute />}> */}
+        <Route path="/register" element={<RagistrarionPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        {/* </Route> */}
 
-      {/* <Route element={<PrivateRoute />}> */}
-      <Route path="/contacts" element={<ContactsPage />} />
-      {/* </Route> */}
+        {/* <Route element={<PrivateRoute />}> */}
+        <Route path="/contacts" element={<ContactsPage />} />
+        {/* </Route> */}
 
-      <Route path="*" element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
     </Routes>
   );
 }
