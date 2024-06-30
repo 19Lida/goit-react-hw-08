@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
 // import { Provider } from "react-redux";
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -35,29 +35,20 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      {/* <div> */}
-      {/* <h1 className="title">Phonebook</h1> */}
-      {/* <Layout /> */}
-      <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route index element={<HomePage />} />
-        {/* <Route element={<RestrictedRoute />}> */}
-        <Route path="/register" element={<RagistrarionPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        {/* </Route> */}
+    <Routes>
+      <Route path="/" element={<Layout />} />
+      <Route index element={<HomePage />} />
+      {/* <Route element={<RestrictedRoute />}> */}
+      <Route path="/register" element={<RagistrarionPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      {/* </Route> */}
 
-        {/* <Route element={<PrivateRoute />}> */}
-        <Route path="/contacts" element={<ContactsPage />} />
-        {/* </Route> */}
+      {/* <Route element={<PrivateRoute />}> */}
+      <Route path="/contacts" element={<ContactsPage />} />
+      {/* </Route> */}
 
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-      {/* <ContactForm /> */}
-      {/* <SearchBox /> */}
-      {/* <ContactList /> */}
-      {/* </div> */}
-    </BrowserRouter>
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 }
 
