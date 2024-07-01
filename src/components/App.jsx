@@ -11,7 +11,7 @@ import Layout from "../components/Layout/Layout.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { refreshUser } from "../redux/auth/operation.js";
 import { selectIsRefreshing } from "../redux/auth/selectors.js";
-import { fetchContacts } from "../redux/contactsOps";
+// import { fetchContacts } from "../redux/contactsOps";
 import { useEffect } from "react";
 
 const ContactsPage = lazy(() => import("../pages/Contacts/ContactsPage.jsx"));
@@ -29,10 +29,10 @@ function App() {
   //   dispatch(fetchContacts());
   // };
 
-  useEffect(() => {
-    dispatch(fetchContacts());
-    // getAllContacts();
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchContacts());
+  //   // getAllContacts();
+  // }, [dispatch]);
 
   useEffect(() => {
     dispatch(refreshUser());
