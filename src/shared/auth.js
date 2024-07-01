@@ -4,9 +4,9 @@ const authInstance = axios.create({
 });
 const setToken = (token) => {
   if (token) {
-    return (authInstance.defaults.headers.authorization = `Bearer ${token}`);
+    return (authInstance.defaults.headers.Authorization = `Bearer ${token}`);
   }
-  authInstance.defaults.headers.authorization = "";
+  authInstance.defaults.headers.Authorization = "";
 };
 export const signup = async (data) => {
   const { data: result } = await authInstance.post("/users/signup", data);

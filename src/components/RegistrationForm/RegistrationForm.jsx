@@ -1,19 +1,29 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-// import * as Yup from "yup";
+import { useDispatch } from "react-redux";
+import * as Yup from "yup";
 // import { nanoid } from "nanoid";
 import css from "./registrationForm.module.css";
+import { register } from "../../redux/auth/operation";
+const validationSchema = Yup.object({
+  name: Yup.string().required("Required"),
+  email: Yup.string().email("Invalid email address").required("Required"),
+  password: Yup.string()
+    .min(6, "Must be at least 6 characters")
+    .required("Required"),
+});
 const RegistrationForm = () => {
+  const dispatch = useDispatch();
+  const handleSubmit = (values, { resetForm }) => {
+    console.log("Submitting values:", values);
+    dispatch(register(values));
+
+    resetForm();
+  };
   return (
     <Formik
-      initialValues={{ email: "", password: "" }}
-      //   validationSchema={Yup.object({
-      //     name: Yup.string().min(3).max(50).required(),
-      //     number: Yup.string().min(3).max(50).required(),
-      //   })}
-      onSubmit={(values, { resetForm }) => {
-        //   handleAddContact({ ...values, id: nanoid() });
-        resetForm();
-      }}
+      initialValues={{ name: "", email: "", password: "" }}
+      validationSchema={validationSchema}
+      onSubmit={handleSubmit}
     >
       <Form className={css.formContainer}>
         <div className={css.box}>
