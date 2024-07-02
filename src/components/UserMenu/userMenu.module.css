@@ -1,17 +1,30 @@
 .userContainer {
-  /* height: 100vh; */
+  display: flex;
+  gap: 10px;
+  /* height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 30px; */
 }
-/* .button {
-    
-  margin-left: 60px;
+.button {
+  background-color: burlywood;
+  border-radius: 4px;
+  font-size: 10px;
+  color: black;
+  border: 1px solid black;
+  font-weight: 500;
+  height: 20px;
+  width: 50px;
+
   :hover {
-    background-color:  #FBD051;
+    background-color: #a8d1e7;
+  }
+  /* margin-left: 60px;
+  :hover {
+    background-color: #fbd051;
     border: 2px solid gray;
     border-radius: 3px;
-  }
-} */
+  } */
+}

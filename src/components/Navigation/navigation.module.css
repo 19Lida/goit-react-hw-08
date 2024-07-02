@@ -1,9 +1,10 @@
-/* .Box {
+.navBox {
   display: flex;
   gap: 30px;
 }
 
-.Link {
+.navLink {
+  margin-left: 10px;
   text-decoration: none;
   color: #a8d1e7;
   font-weight: 400;
@@ -11,4 +12,4 @@
   &.active {
     color: #fbd051;
   }
-} */
+}
