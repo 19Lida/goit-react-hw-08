@@ -15,8 +15,8 @@ const RegistrationPage = () => {
   }
   return (
     <div className={css.registerContainer}>
-      <h2>Create Your Account </h2>;
-      <RegistrationForm onSubmit={handleRegister} />;
+      <h2>Create Your Account </h2>
+      <RegistrationForm onSubmit={handleRegister} />
     </div>
   );
 };

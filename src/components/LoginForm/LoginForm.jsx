@@ -22,15 +22,7 @@ const LoginForm = () => {
       initialValues={{ email: "", password: "" }}
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
-      // initialValues={{ email: "", password: "" }}
-      // //   validationSchema={Yup.object({
-      // //     name: Yup.string().min(3).max(50).required(),
-      // //     number: Yup.string().min(3).max(50).required(),
-      // //   })}
-      // onSubmit={(values, { resetForm }) => {
-      //   //    handleAddContact({ ...values, id: nanoid() });
-      //   resetForm();
-      // }}
+     
     >
       <Form className={css.formContainer}>
         <div className={css.box}>
