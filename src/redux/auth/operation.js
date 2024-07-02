@@ -13,7 +13,7 @@ export const register = createAsyncThunk(
   "auth/register",
   async (data, { rejectWithValue }) => {
     try {
-      const { data: result } = await api.signup(data);
+      const result = await api.signup(data);
       return result;
     } catch ({ responce }) {
       return rejectWithValue(responce);
