@@ -7,6 +7,7 @@ import {
 } from "./operations";
 import { selectContacts } from "../../redux/contacts/selectors";
 import { selectNameFilter } from "../../redux/filters/selectors";
+import { logout } from "../auth/operations";
 const initialState = {
   items: [],
   loading: false,
@@ -51,6 +52,11 @@ const contactsSlice = createSlice({
       .addCase(fetchDeleteContacts.rejected, (store, { payload }) => {
         store.loading = false;
         store.error = payload;
+      })
+      .addCase(logout.fulfilled, (state) => {
+        state.items = [];
+        state.error = null;
+        state.loading = false;
       });
   },
 });
