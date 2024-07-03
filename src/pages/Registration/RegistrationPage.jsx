@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { isUserLogin } from "../../redux/auth/selectors";
-import { register } from "../../redux/auth/operation";
+import { register } from "../../redux/auth/operations";
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 import css from "./registrationPage.module.css";
 const RegistrationPage = () => {

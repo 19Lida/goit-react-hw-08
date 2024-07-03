@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Navigate } from "react-router-dom";
-import { login } from "../../redux/auth/operation";
+import { login } from "../../redux/auth/operations";
 import { isUserLogin } from "../../redux/auth/selectors";
 
 import LoginForm from "../../components/LoginForm/LoginForm";
