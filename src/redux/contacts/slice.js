@@ -4,7 +4,7 @@ import {
   fetchContacts,
   fetchAddContacts,
   fetchDeleteContacts,
-} from "./operation";
+} from "./operations";
 import { selectContacts } from "../../redux/contacts/selectors";
 import { selectNameFilter } from "../../redux/filters/selectors";
 const initialState = {
