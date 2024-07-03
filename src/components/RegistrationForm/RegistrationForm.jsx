@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 // import { nanoid } from "nanoid";
 import css from "./registrationForm.module.css";
-import { register } from "../../redux/auth/operation";
+import { register } from "../../redux/auth/operations";
 const validationSchema = Yup.object({
   name: Yup.string().required("Required"),
   email: Yup.string().email("Invalid email address").required("Required"),

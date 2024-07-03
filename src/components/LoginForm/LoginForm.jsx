@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { login } from "../../redux/auth/operation";
+import { login } from "../../redux/auth/operations";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 // import { nanoid } from "nanoid";
@@ -22,7 +22,6 @@ const LoginForm = () => {
       initialValues={{ email: "", password: "" }}
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
-     
     >
       <Form className={css.formContainer}>
         <div className={css.box}>
